@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TimeBrain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/side.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/bottomnav.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/mainwmedia.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/smarts.css">
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bottomnav.js"></script>
+    <script src="scripts/side.js"></script>
+    <script src="scripts/check24Hours.js"></script>
+</head>
+<div id="mySidenav" class="sidenav draw">
+    <a class="linkside" href="#">
+        <div class="dropdown">
+            <p class="dropbtn">About</p>
+            <div class="dropdown-content">
+                <h4>TimeBrain</h4>
+                <h6>TimeBrain V2.0 S 0219</h6>
+                <p>TimeBrain - second version [Winter Edition] of simple App , which helps BAMF-Employees calculate
+                    their Worktime.</p>
+            </div>
+        </div>
+    </a>
+    <a class="linkside" href="#">
+        <div class="dropdown">
+            <p class="dropbtn">Kontakt</p>
+            <div class="dropdown-content">
+                <p id="kontakt">
+                    <p>Developed<br>by Nikita Fomin</p>
+                    <p>Department 22E/22C/22D</p>
+                    <p>I would be glad to hear your feedbacks and wishes.</p>
+                    <p>Mail to
+                        <a class="mailtome" href="mailto:Nikita.Fomin@bamf.bund.de">-> Me <- </a> 
+                    </p> 
+                </p> 
+            </div> 
+        </div>
+                                
+    </a> 
+
+</div>
+<!------------------------->
+                                <div id="bottomnNavBar1">
+                                    <p>Bemerkungen</p>
+                                    <ul id="rulelist1">
+                                        <li id="rule930">Regel 930: Nach 9 Stunden 30 Minuten Ar­beits­zeit wird dir
+                                            eine
+                                            extra
+                                            Pause angerechnet. Von 9 Std. 30 min bis 9 Std. 45 min zählt jede Minute
+                                            als Pause. </li>
+                                    </ul>
+                                </div>
+
+                                <div id="bottomnNavBar2">
+                                    <p>Bemerkungen</p>
+                                    <ul id="rulelist2">
+                                        <li id="rule915">Regel 915: Die Kernzeit im Bundesamt liegt von 9 bis 15 Uhr.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="bottomnNavBar3">
+                                    <p>Bemerkungen</p>
+                                    <ul id="rulelist3">
+                                        <li id="rule905">Regel 905: Theoretisch darfst du in dieser Zeit nicht Arbeiten
+                                            ( Azubis ab 6 Uhr
+                                            morgens).</li>
+                                    </ul>
+                                </div>
+                                <div id="bottomnNavBar4">
+                                    <p>Bemerkungen</p>
+                                    <ul id="rulelist4">
+                                        <li id="rule963">Regel 963: Nach 6 Stunden Ar­beits­zeit wird dir
+                                                eine Pause angerechnet. Von 6 Std. bis 6 Std. 30 min zählt jede Minute
+                                                als Pause.</li>
+                                    </ul>
+                                </div>
+
+                                <body id="body">
+                                    <div class="main " id="main">
+                                        <div class="top">
+                                            <div class="left" onmousemove="closeNav();closeNavTop()">
+                                                <h1><span class="transfering"> TimeBrain </span></h1>
+                                                <h2>Winter Edition <img class="rotating" src="materials/snowflake.png" alt="snowflake"
+                                                        width="25px"></h2>
+                                            </div>
+                                            <div class="right">
+
+                                                <span id="menu1" style="font-size:30px;cursor:pointer" onmouseover="openNav2s()">&#9783;
+                                                    Menu</span>
+                                            </div>
+                                        </div>
+                                        <div class="bottom " id="bottom" onmousemove="closeNav();closeNavTop()">
+
+
+
+                                            <div class="input ">
+
+                                                <p>Angefangen um:</p>
+                                                <input autofocus class="inputTimeBox" id="ahtime" maxlength="2" type="number"
+                                                    placeholder="HH" size="1" min="5" max="20"   onblur="maxLengthCheckah();check24Hours();ErrorTimeah();open905Nav();open915Nav();">
+                                                &nbsp;
+                                                <input class="inputTimeBox" id="amtime" maxlength="2" type="number" size="1"
+                                                    placeholder="MM" min="0" max="59"  onblur="maxLengthCheckam();ErrorTimeam()">
+                                                <button class="buttonReset" onclick="resetStartTime()">x</button>
+                                                <br>
+                                                <p>Soll-Zeit bis:</p>
+                                                <p id="musttime">XX:XX:XX</p>
+                                                <p>Beende um:</p>
+                                                <input class="inputTimeBox" id="chtime"  maxlength="2" type="number" size="1"
+                                                    placeholder="HH" min="0" max="20" onblur="maxLengthCheckch();ErrorTimech();open915Nav();">
+                                                &nbsp;
+                                                <input class="inputTimeBox" id="cmtime"  maxlength="2" type="number" size="1"
+                                                    placeholder="MM" min="0" max="59" onblur="maxLengthCheckcm();checkBeforeGo();ErrorTimecm();">
+                                                <button class="buttonReset" onclick="resetEndTime()">x</button>
+                                                <br><br>
+                                                <button class="buttonGo" onclick="ErrorTimech();ErrorTimecm();ErrorTimeah();ErrorTimeam();checkBeforeGo();TimeBrain();">Berechnen</button>
+                                                <button class="buttonAll" onclick="resetAllTime()">Reset</button>
+                                                <br>
+                                                <p>Meine Ar­beits­zeit:</p>
+                                                <p id="demo">XX:XX:XX</p>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="footer" id="footer">
+
+                                        </div>
+                                    </div>
+                                </body>
+
+</html>

@@ -1,0 +1,210 @@
+
+  .draw {
+    overflow: hidden;
+  }
+  .draw::before, .draw::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+    
+    z-index: -1;
+  }
+  .draw::before {
+    top: 0;
+    left: 0;
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
+    animation: border 10s infinite;
+  }
+  .draw::after {
+    bottom: 0;
+    right: 0;
+    animation: border 10s 5s infinite, borderColor 10s 5s infinite;
+  }
+  
+  @keyframes border {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    25% {
+      width: 100%;
+      height: 0;
+    }
+    50% {
+      width: 100%;
+      height: 100%;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @keyframes borderColor {
+    0% {
+      border-bottom-color: #60daaa;
+      border-left-color: #60daaa;
+    }
+    50% {
+      border-bottom-color: #60daaa;
+      border-left-color: #60daaa;
+    }
+    51% {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    100% {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  .rotating {
+    -webkit-animation: rotating 3.5s linear infinite;
+    -moz-animation: rotating 3.5s linear infinite;
+    -ms-animation: rotating 3.5s linear infinite;
+    -o-animation: rotating 3.5s linear infinite;
+    animation: rotating 3.5s linear infinite;
+  }
+
+
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .buttonGo {
+    background-color: #60daaa; /* Green */
+    border: none;
+    color: whitesmoke;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  outline: none;
+  }
+  
+  .buttonGo {
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: whitesmoke; 
+    border: 2px solid #60daaa;
+    border-radius: 5px;
+    
+  outline: none;
+  }
+  
+  .buttonGo:hover, .buttonGo:focus {
+    background-color: #60daaa;
+    color: whitesmoke;
+    
+  outline: none;
+  }
+
+  .buttonAll {
+    background-color: #da6060; /* Green */
+    border: none;
+    color: whitesmoke;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  outline: none;
+  }
+  
+  .buttonAll {
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: whitesmoke; 
+    border: 2px solid #da6060;
+    border-radius: 5px;
+    
+    outline: none;
+  }
+  
+  .buttonAll:hover, .buttonAll:focus {
+    background-color: #da6060;
+    color: whitesmoke;
+    
+  outline: none;
+  }
+
+
+  .buttonReset {
+    background-color: #da6060; /* Green */
+    border: none;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 5px;
+  outline: none;
+  }
+  
+  .buttonReset {
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: whitesmoke; 
+    border: 2px solid #da6060;
+    border-radius: 5px;
+    
+    outline: none;
+  }
+  
+  .buttonReset:hover , .buttonReset:focus {
+    background-color: #da6060;
+    color: whitesmoke;
+    
+  outline: none;
+  }
+
+  #ergo
+  {
+    padding: 10px 20px;
+    position: absolute;
+    float: right;
+    display: block;
+    bottom: 0;
+    transition: all 0.5s linear;
+  }

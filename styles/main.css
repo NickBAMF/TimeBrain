@@ -1,0 +1,234 @@
+html {
+    overflow: hidden;
+}
+
+html , body ,main {
+    
+    min-width: 85%;
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: all 0.5s linear;
+    color: whitesmoke;
+    font-size: 1.4em;
+    
+    height: 100vw;
+}
+
+body::after {
+    content: "";
+    font-family: "Lato", sans-serif;
+    transition: all 0.5s linear;
+    color: whitesmoke;
+    background: url("../materials/backg.jpg");
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -3;   
+  
+}
+
+
+
+.sidenav {
+    height: calc(100% - 60px);
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+ .sidenav .linkside {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+    color: whitesmoke;
+    font-size: 1.5em;
+    background-color: transparent;
+}
+
+#main {
+    transition: margin-right .5s;
+    padding: 16px;
+}
+
+#menu1,#menu2 {
+    transition: all 0.5s linear;
+}
+
+#menu2 {
+    visibility: hidden;
+}
+.right 
+{
+    padding-top: 20px;
+    height: 20%;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    
+    transition: all 0.5s linear;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    
+    transition: all 0.5s linear;
+}
+
+.left {
+    flex-basis: 90%;
+}
+
+.left h1 {
+    margin: 0;
+    padding: 50px 0 0 100px;
+}
+.left h2 {
+    margin: 0;
+    padding: 10px 0 0 150px;
+}
+
+
+.bottom {
+    transition: all 0.5s linear;
+    margin: 2.12766% 0 8.51064%;
+    padding: 3.19149% 12.76596% 2.12766%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.input {
+    margin: 0 14.89362%;
+    padding: 0 4.25532% 4.25532% 4.25532%; 
+    text-align: center;
+}
+
+.inputTimeBox {
+    font-size: 1.1em;
+    width: 50px; height: 25px
+}
+
+.footer {
+    background-color: rgb(39, 39, 39) ;
+    
+}
+
+p , h1 , h2 , h3 , h4 , h5 , h6
+{
+    cursor: default;
+}
+
+#musttime
+{
+    
+    
+        animation: color-change 0s infinite;
+
+}
+
+@keyframes color-change {
+    0% { color:#ffffff; }
+    25% { color:#66ff99; }
+    50% { color: #009933; }
+    75% { color:#66ff99; }
+    100% { color: #ffffff; }
+}
+
+
+
+.dropbtn {
+    font-size: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    
+    transition: all 0.3s linear;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+    transition: all 0.3s linear;
+}
+
+.dropdown-content {
+    color: whitesmoke;
+    position: relative;
+    display: none;
+    right: 0;
+    font-size: 0.7em;
+    background-color: transparent;
+    width: 93%;
+}
+
+.dropdown-content h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content h4
+{
+    margin: 25px 0 10px 0;
+}
+
+.dropdown:hover .dropdown-content
+ {
+     display: block;
+    }
+
+.dropdown:hover .dropbtn 
+{
+    color: #3e8e41;
+    margin-left: 15px;
+    transition: all 0.3s linear;
+}
+
+.mailtome {
+    padding: 8px 8px 8px 32px;
+    text-decoration: underline;
+    display: block;
+    transition: 0.5s;
+    font-size: 1.5em;
+    background-color: transparent;
+    color: lightblue;
+    cursor: help;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+    border: none;
+  border-bottom: 3px solid #60daaa;
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 3px 6px;
+}
+
+input[type="number"]:focus
+ {
+  outline: none;
+}

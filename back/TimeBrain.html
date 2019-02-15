@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TimeBrain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="side.js"></script>
+</head>
+<div id="mySidenav" class="sidenav" >
+    <a class="linkside" href="#">
+        <div class="dropdown">
+            <p class="dropbtn">About</p>
+            <div class="dropdown-content">
+                <h4>TimeBrain</h4>
+                <h6>TimeBrain V2.0 0119</h6>
+                <p>TimeBrain - first release of simple App , which helps BAMF-Employees calculate their Worktime.</p>
+            </div>
+        </div>
+    </a>
+    <a class="linkside" href="#">
+        <div class="dropdown">
+            <p class="dropbtn">Kontakt</p>
+            <div class="dropdown-content">
+                <p id="kontakt">
+                    <p>Developed<br>by Nikita Fomin</p>
+                    <p>Department 22E/22C/22D</p>
+                    <p>I would be glad to hear your feedbacks and wisches.</p>
+                    <p>Mail to
+                        <a class="mailtome" href="mailto:Nikita.Fomin@bamf.bund.de">-> Me <- </a>
+                    </p>
+                </p>
+            </div>
+        </div>
+    </a>
+</div>
+
+<body>
+    <div class="main" id="main" >
+        <div class="top">
+            <div class="left">
+                <h1>TimeBrain &#174;</h1>
+            </div>
+            <div class="right">
+                <span id="menu" style="font-size:25px;cursor:pointer" onmouseover="openNav2s()" >&#9783; Menu</span>
+            </div>
+        </div>
+        <div class="bottom" onmousemove="closeNav()">
+
+
+
+            <div class="input" >
+                <p>Angefangen um:</p>
+                <input id="ahtime" type="number" size="1" min="0" max="23" onchange="ErrorTimeah()">
+                &nbsp;
+                <input id="amtime" type="number" on size="1" min="0" max="59" onchange="ErrorTimeam();mustTime()" >
+                <br>
+                <p>Soll-Zeit bis:</p>
+                <p id="musttime">XX:XX:XX</p>
+                <p>Beende um:</p>
+                <input id="chtime" type="number" size="1" min="0" max="23" onchange="ErrorTimech()">
+                &nbsp;
+                <input id="cmtime" type="number" size="1" min="0" max="59" onchange="ErrorTimecm()">
+                <br><br>
+                <button onclick="TimeBrain()">Berechnen</button>
+                <br>
+                <p>Meine Ar­beits­zeit:</p>
+                <p id="demo">XX:XX:XX</p>
+
+                
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            
+        </div>
+    </div>
+</body>
+
+</html>

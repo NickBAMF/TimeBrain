@@ -1,0 +1,34 @@
+#bottomnNavBar1 , #bottomnNavBar2 , #bottomnNavBar3 , #bottomnNavBar4{
+  background-color: #333;
+  position: fixed;
+  height: 40%;
+  left: -500px;
+  width: 20%;
+  top: 300px;
+  transition: left 1s linear;
+  color: whitesmoke;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  background-color:transparent;
+}
+
+#bottomnNavBar1 p, #bottomnNavBar2 p, #bottomnNavBar3 p , #bottomnNavBar4 p
+{
+  
+  transition: left 1s linear;
+  color: whitesmoke;
+  padding: 15px;
+  text-decoration: none;
+  background-color:transparent;
+}
+
+#rulelist1 , #rulelist2 ,#rulelist3 , #rulelist4
+{
+  text-align: left;
+  font-size: 0.9em;
+}
+
+#rulelist1 li,#rulelist2 li,#rulelist3 li,#rulelist4 li {
+  padding: 5px 6px;
+}
